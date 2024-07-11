@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Grids, DBGrids;
+  Dialogs, StdCtrls, Grids, DBGrids, frxClass, frxDBSet;
 
 type
   TKustomer = class(TForm)
@@ -31,6 +31,8 @@ type
     Kcnama: TEdit;
     Kcetak: TButton;
     Kdiskon: TLabel;
+    DKustomer: TfrxDBDataset;
+    RKustomer: TfrxReport;
     procedure PosisiAwal;
     procedure Bersih;
     procedure KondisiDiskon;
@@ -213,7 +215,7 @@ end;
 
 procedure TKustomer.KcetakClick(Sender: TObject);
 begin
-REPORT.Show;
+RKustomer.ShowReport();
 end;
 
 end.

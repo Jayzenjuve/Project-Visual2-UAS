@@ -8,9 +8,6 @@ uses
 
 type
   TREPORT = class(TForm)
-    RKustomer: TfrxReport;
-    DKustomer: TfrxDBDataset;
-    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,10 +22,5 @@ implementation
 uses Unit2, TypInfo;
 
 {$R *.dfm}
-
-procedure TREPORT.FormShow(Sender: TObject);
-begin
-RKustomer.ShowReport(True);
-end;
 
 end.
